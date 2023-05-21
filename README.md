@@ -6,7 +6,7 @@ Mostly Micropython projects...
 
 ## Table of Contents
 
-[ESP32_Bekant_Deluxe](./ESP32_Bekant_Deluxe)
+- [ESP32_Bekant_Deluxe](./ESP32_Bekant_Deluxe)
 
 [Pico_Coffee](./Pico_Coffee)
 
