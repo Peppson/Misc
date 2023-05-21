@@ -12,5 +12,7 @@ Mostly Micropython projects...
 
 - [Pico_Pc_Temp](./Pico_Pc_Temp)
 
+- [Pico_Watchdog](./Pico_Watchdog)
+
 &nbsp;
 
