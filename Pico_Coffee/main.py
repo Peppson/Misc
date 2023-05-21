@@ -1,5 +1,5 @@
 
-####### Pico_Coffe 3.0 #######
+####### Pico_Coffee 3.0 #######
 
 # http://192.168.1.3/
 # ändra ip i båda index.html för xml
