@@ -1,5 +1,5 @@
 # Misc 
-Mostly Micropython projects...
+Mostly Micropython projects... 
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/MicroPython_new_logo.svg/1200px-MicroPython_new_logo.svg.png" align="right"
      alt="Ö" width="160" height="160">
