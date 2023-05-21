@@ -1,8 +1,6 @@
 # Misc
 
-Mostly Micropython projects... 
-&nbsp;
-
+Mostly Micropython projects...
 
 - [ESP32_Bekant_Deluxe](./ESP32_Bekant_Deluxe)
 
