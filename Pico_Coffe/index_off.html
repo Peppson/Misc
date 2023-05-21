@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#06121c">
+        <meta name="msapplication-TileColor" content="#06121c">
+        <!-- 
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar" content="#06121c">
+        <meta name="apple-mobile-web-app-title" content="&Auml;r Kaffet Klart?"> -->
+        <link rel="apple-touch-icon" href="https://static.vecteezy.com/system/resources/previews/010/159/491/original/coffee-icon-sign-symbol-design-free-png.png">
+        <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/010/159/491/original/coffee-icon-sign-symbol-design-free-png.png"> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <meta http-equiv="Cache-control" content="private"> 
+        <title>&Auml;r kaffet klart?</title>
+    </head>
+   
+    <body>    
+        <center> 
+            <h1>&Auml;r kaffet klart?</h1>  
+            <img class="kaffet" id="kaffet" src="https://i.pinimg.com/originals/fb/ed/b2/fbedb25b550829b8b4c4984b45992b39.gif">
+            <br><br><br>
+            <div>
+                <label class="switch">
+                <input id="switchen" type="checkbox" onchange="sendButtonState(this.id,this.checked?'1':'0');">
+                <div class="slider round"></div> 
+                </label>
+            </div>      
+            <br><br>
+        <div><p id="container" hidden></p></div>    
+        </center> 
+    </body>
+</html>
+
+
+<script>
+    // skicka info till server + sätt knapp och gif lokalt
+    function sendButtonState(e) {
+    var switchButton = document.getElementById("switchen");
+
+    if (switchButton.checked == true) {
+        document.getElementById("kaffet").src =
+        "https://media0.giphy.com/media/5mYlHHxUrlv3pShN9s/giphy.gif?cid=790b7611f85d4fd6a1e96f31303571c07361af816a4c4b07&rid=giphy.gif&ct=s";
+        container.innerHTML = ("True")
+        fetch(`/toggle/on`);
+    } else {
+        document.getElementById("kaffet").src =
+        "https://i.pinimg.com/originals/fb/ed/b2/fbedb25b550829b8b4c4984b45992b39.gif";
+        container.innerHTML = ("False")
+        fetch(`/toggle/off`);
+    }
+    }
+
+    // få info från server function
+    function fetchData() {
+    const xhr = new XMLHttpRequest();
+    const container = document.getElementById("container");
+
+    // checka 200 status + uppdatering
+    
+    xhr.onload = function () {
+        //console.log(xhr.responseText)
+        if (this.status === 200) {
+        if (container.innerHTML == xhr.responseText) {
+            //inget händer
+        } else if (container.innerHTML != xhr.responseText) {
+            console.log("Uppdaterar!");
+
+            //uppdatera med vad?-------------------------------------
+            if (xhr.responseText == "True") {
+            container.innerHTML = "True";
+            document.getElementById("switchen").checked = true;
+            document.getElementById("kaffet").src =
+            "https://media0.giphy.com/media/5mYlHHxUrlv3pShN9s/giphy.gif?cid=790b7611f85d4fd6a1e96f31303571c07361af816a4c4b07&rid=giphy.gif&ct=s";
+
+            } else if (xhr.responseText == "False") {
+            container.innerHTML = "False";
+            document.getElementById("switchen").checked = false;
+            document.getElementById("kaffet").src =
+            "https://i.pinimg.com/originals/fb/ed/b2/fbedb25b550829b8b4c4984b45992b39.gif";
+
+            } else {
+            console.log("Samma, ingen update 2"); //händer aldrig
+            }
+        } else {
+            console.log("error 404");
+        }
+        }
+    };
+    xhr.open("get", "http://192.168.1.3/xml");
+    xhr.send();
+    }
+
+    {
+    setInterval(fetchData, 5000);
+    }
+</script>
+
+
+<style>
+  body {
+    background-color: #030b11;
+    background-image: url("https://wallpaperforu.com/wp-content/uploads/2020/07/black-wallpaper-20072315094617.jpg");   
+    }
+
+  html {
+    font-family: Helvetica;
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    }
+
+    img.kaffet{
+    width: 55%;
+    height: auto;
+    pointer-events: none;
+    }
+
+    h1 {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+    top: 8px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    .switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    margin: auto 12px;
+    }
+      
+    .switch input {display:none;}
+      
+    .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    }
+      
+    .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 100%;  
+    }
+      
+    input:checked + .slider {
+    background-color: #1ad956;
+    }
+      
+    input:focus + .slider {
+    box-shadow: 0 0 1px #1ad956;
+    }
+      
+    input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(56px);
+    }
+      
+    /* Rounded sliders */
+    .slider.round {
+    border-radius: 50px;
+    }
+</style>
