@@ -1,7 +1,9 @@
-# Misc
-
+# Misc [![Cult Of Martians][cult-img]][cult]
 Mostly Micropython projects...
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/MicroPython_new_logo.svg/1200px-MicroPython_new_logo.svg.png" align="right"
+     alt="Ö" width="160" height="160">
+     
 - [ESP32_Bekant_Deluxe](./ESP32_Bekant_Deluxe)
 
 - [Pico_Coffee](./Pico_Coffee)
@@ -13,12 +15,6 @@ Mostly Micropython projects...
 &nbsp;
 
 
-<div style="display: flex;">
-  <div style="flex: 1;">
-    This is some text describing the image.
-  </div>
-  <div style="flex: 1;">
-    <img src="[image.jpg](https://i0.wp.com/iotbyhvm.ooo/wp-content/uploads/2019/01/micropython.png?resize=800%2C445&ssl=1)" alt="Image" width="300px">
-  </div>
-</div>
+
+
 
