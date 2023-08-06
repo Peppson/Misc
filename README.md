@@ -9,7 +9,7 @@ Mostly Micropython...
 - [Mocca_Master_Server](./Mocca_Master_Server)
 - [PC_Temp_Meter](./PC_Temp_Meter)
 - [Pi_UPS_Watchdog](./Pi_UPS_Watchdog)
-- [Solder_Station](./Solder_Station)
+- [Solder_Station (c++)](./Solder_Station)
 
 &nbsp;
 
