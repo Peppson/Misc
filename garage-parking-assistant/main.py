@@ -2,10 +2,12 @@
 from machine import Pin
 button = Pin(2, Pin.IN, Pin.PULL_DOWN) 
 
-
+# Debug
 if button.value():
     pass
-else:
-    import Pico_parking_helper
+# Normal operation
+else: 
+    import garage_parking_assistant
+    
 
 

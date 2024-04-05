@@ -34,14 +34,14 @@ highscore = "0"                           # highscore str
 # Read highscore from flash
 def read_highscore_from_flash():
     try:
-        with open("log.csv", "r") as f:
+        with open("highscore.csv", "r") as f:
             highscore = f.readline(8)
         if len(highscore) != 4:
             raise ValueError("Invalid highscore value")
 
     except (OSError, ValueError) as e:
         print(f"Error: {e}")
-        with open("log.csv", "w") as f:
+        with open("highscore.csv", "w") as f:
                 f.write("0000")
                 highscore = "0000"
     return highscore
@@ -51,7 +51,7 @@ def read_highscore_from_flash():
 def save_highscore_to_flash(minutes, seconds):
     data = "{:02d}{:02d}".format(minutes, seconds)
     try:
-        with open("log.csv", "w") as f:
+        with open("highscore.csv", "w") as f:
             f.write(data)
     except:
         pass
