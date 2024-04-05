@@ -1,0 +1,14 @@
+import RPi.GPIO as GPIO
+from time import sleep
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(21, GPIO.OUT)
+
+try:
+    while True:
+        GPIO.output(21, 1)
+        sleep(0.2)
+        GPIO.output(21, 0)
+        sleep(60)
+
+except KeyboardInterrupt:
+    GPIO.cleanup()
