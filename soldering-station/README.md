@@ -1,9 +1,9 @@
 # soldering-station
 
 Short and sweet Hakko based soldering station.  
-Inspired from: https://www.youtube.com/watch?v=gd2W-boIRPo&t=1s
+Inspired from: https://www.youtube.com/watch?v=gd2W-boIRPo&t=1s  
 
-&nbsp;
+&nbsp; 
 ## Hardware
 ![station.jpg](station.jpg)
 
@@ -11,4 +11,4 @@ Inspired from: https://www.youtube.com/watch?v=gd2W-boIRPo&t=1s
 ## Schematic (from video)
 ![schematics.png](schematics.png)
 
-&nbsp; 
+&nbsp;
