@@ -7,3 +7,5 @@ Pi-Pico running Micropython.
 &nbsp; 
 ## Schematic
 ![schematic.jpg](./schematic.jpg)
+
+&nbsp;
