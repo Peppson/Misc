@@ -1,4 +1,2 @@
-# Miscellaneous/older projects
+# Miscellaneous / older projects
 &nbsp;
-&nbsp;
-
