@@ -57,7 +57,7 @@ def display_init():
 
 # Image pikachu read from flash
 def read_image_from_flash():
-    with open('ggi.pbm', 'rb') as f:
+    with open('pika.pbm', 'rb') as f:
         for i in range(3):
             f.readline() # nothing
         data = bytearray(f.read())
