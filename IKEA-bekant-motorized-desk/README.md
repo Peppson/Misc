@@ -15,5 +15,5 @@ And an SSD1306 oled display.
 &nbsp;
 
 ### Main unit, mounted below the desk
-![.main_unit.jpg](.main_unit.jpg)
+![.main_unit_esp32.jpg](.main_unit_esp32.jpg)
 &nbsp;
