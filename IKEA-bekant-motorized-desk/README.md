@@ -10,7 +10,7 @@ And an SSD1306 oled display.
 &nbsp;
 ## Hardware  
 
-### Controller/UI
+### Controller
 ![.controller.jpg](.controller.jpg)
 &nbsp;
 
